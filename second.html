@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Zephyron</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .earth-container {
+            background-size: cover;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .ocean {
+            opacity: 0; 
+            transform: translate(-100px, 100px); 
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            padding: 100px 20px;
+            margin-bottom: 50px;
+            position: relative;
+            color: #fff; 
+            
+        }
+
+        #zephyron {
+            background-image: url('images/ocean.gif'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        #atlantic {
+            background-image: url('images/game.gif');
+            background-size: cover;
+            background-position: center;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #010101;
+            margin-bottom: 20px; 
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px; 
+        }
+
+        .ocean-button {
+            padding: 10px 20px;
+            background-color: #0077be;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+            text-decoration: none; 
+            display: inline-block; 
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translate(0, 0); 
+        }
+
+        .about-us {
+            background-color: #0077be; 
+            color: #ffffff; 
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+            max-width: 800px; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.2); 
+            z-index: 0;
+        }
+
+        .about-us h2 {
+            position: relative;
+            z-index: 1; 
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            position: relative;
+            z-index: 1; 
+        }
+
+        .team-member {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ffffff; 
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1); 
+            display: flex; 
+            align-items: center; 
+        }
+
+        .team-member img {
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            margin-right: 15px; 
+        }
+
+        .team-member h3 {
+            margin: 0;
+            color: #ffffff; 
+        }
+
+        .team-member p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #ffffff; 
+        }
+
+        .center-member {
+            grid-column: 1 / -1; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="earth-container">
+        <video autoplay muted loop class="earth-image" style="width: 100%; height: auto;">
+            <source src="images/capture.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content">
+        <section class="ocean" id="zephyron">
+            <h2 style="background-color: #fff;">Azure Abyss of Zephyron</h2>
+            <br>
+            <p>Planet Name: Zephyron<br>
+            Ocean Name: The Azure Abyss<br>
+            Surface Area: Approximately 70% of Zephyron is covered by water, with vast oceans teeming with life and unique ecosystems.</p>
+            <a href="explore.html" class="ocean-button">Explore Zephyron</a> 
+        </section>
+        <section class="ocean" id="atlantic">
+            <h2>Zephyron Pokémon</h2>
+            <h3 style="background-color: #000;">Check this out.</h3>
+            <a href="game/Pokémon.html" class="ocean-button">Games</a> 
+        </section>
+        <section class="ocean about-us" id="arctic">
+            <h2>About Us</h2>
+            <p>We are a passionate team dedicated to exploring and understanding the world's oceans.</p>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="images/5.jpeg"> 
+                    <div>
+                        <h3>Aashish Thomas Oommen</h3>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/4.jpeg"> 
+                    <div>
+                        <h3>Shatakshi Pattanaik</h3>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/1.jpeg"> 
+                    <div>
+                        <h3>Shradhdha Sharad Kulkarni</h3>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/3.jpeg"> 
+                    <div>
+                        <h3>Sanjana M</h3>
+                    </div>
+                </div>
+                <div class="center-member">
+                    <div class="team-member">
+                        <img src="images/2.png"> 
+                        <div>
+                            <h3>Sinchana N</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+        const earthImage = document.querySelector(".earth-image");
+        const scrollPosition = window.scrollY;
+
+        const oceans = document.querySelectorAll('.ocean');
+
+        oceans.forEach(ocean => {
+            const rect = ocean.getBoundingClientRect();
+            console.log(`Checking ${ocean.id}: top = ${rect.top}, bottom = ${rect.bottom}`); 
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                ocean.classList.add('visible');
+            } else {
+                ocean.classList.remove('visible');
+            }
+        });
+        });
+    </script>
+</body>
+</html>

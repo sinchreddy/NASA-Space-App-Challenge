@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zephyron</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; 
+            position: relative;
+            cursor: pointer;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <video id="backgroundVideo" autoplay muted loop>
+        <source src="images/first.mp4" type="video/mp4"> 
+    </video>
+
+    <video id="transitionVideo" muted style="display: none;">
+        <source src="images/zoom.mp4" type="video/mp4"> 
+    </video>
+    <div>
+        <h1>Welcome to Zephyron</h1>
+        <p>Click anywhere to explore!</p>
+    </div>
+
+    <script>
+        const backgroundVideo = document.getElementById('backgroundVideo');
+        const transitionVideo = document.getElementById('transitionVideo');
+
+        document.body.addEventListener('click', () => {
+            backgroundVideo.pause();
+            backgroundVideo.style.display = 'none';
+            transitionVideo.style.display = 'block';
+            transitionVideo.currentTime = 0; 
+            transitionVideo.play();
+
+            transitionVideo.addEventListener('ended', () => {
+                window.location.href = "second.html"; 
+            });
+        });
+    </script>
+</body>
+</html>

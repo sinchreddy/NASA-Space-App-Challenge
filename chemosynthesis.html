@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chemosynthesis facts</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        #video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .content {
+            background-color: #f4f4f4; 
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        .button {
+            background-color: #1e90ff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0066cc;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="video-container">
+        <video autoplay muted loop>
+            <source src="images/chemo.mp4" type="video/mp4"> 
+        </video>
+    </div>
+
+    <div id="learn-more" class="content">
+        <h1>Explore the World</h1>
+        <p>Watch our 1-minute video to dive into the wonders of the world. <br>
+            Stay with us as we take you on a journey through captivating experiences.<br></p>
+            <br>
+        <a href="https://oceanexplorer.noaa.gov/edu/materials/chemosynthesis-fact-sheet.pdf" class="button">Continue</a>
+    </div>
+
+</body>
+</html>
